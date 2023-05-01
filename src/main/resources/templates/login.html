@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>login</title>
+    </head>
+    <body>
+        <div>
+            <form method="post" th:action="@{/login}">
+                <div th:if="${param.error}" class="alert alert-error">Invalid
+                    username and password.</div>
+                <div th:if="${param.logout}" class="alert alert-success">You
+                    have been logged out.</div>
+                <div><span>Username:</span><input type="text" name="username" /></div>
+                <div><span>Password:</span><input type="password" name="password" /></div>
+                <div><input type="submit" value="Login" /></div>
+            </form>
+        </div>
+    </body>
+</html>
